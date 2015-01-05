@@ -1,7 +1,7 @@
 comparator
 ================
 
-[![Build Status](https://travis-ci.org/stoeffel/comparator.svg)](https://travis-ci.org/stoeffel/comparator) [![npm version](https://badge.fury.io/js/comparator.svg)](http://badge.fury.io/js/comparator)
+[![Build Status](https://travis-ci.org/stoeffel/comparator.svg)](https://travis-ci.org/stoeffel/comparator) [![npm version](https://badge.fury.io/js/compare.js.svg)](http://badge.fury.io/js/compare.js)
 > Comparator functions for your favorite sort-algo
 
 Installation
