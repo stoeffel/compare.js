@@ -139,6 +139,3 @@ caseInsensitive()('A', 'a'); // => 0
 
 mergesort(list, property('name', caseInsensitive()));
 ```
-
-
-### WIP natural(fn) => comparator(a,b)
