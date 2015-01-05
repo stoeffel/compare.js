@@ -1,4 +1,9 @@
 var compare = require('./index.js'),
+  caseInsensitive = compare.caseInsensitive,
+  simple = compare.simple,
+  desc = compare.desc,
+  date = compare.date,
+  property = compare.property,
   sinon = require('sinon');
   expect = require('expect.js');
 
@@ -6,7 +11,6 @@ describe('Comparator', function() {
 
   describe('#simple', function() {
     it('should return -1, 0 or 1', function() {
-      var simple = compare.simple;
       expect(simple()).to.be.a('function');
       expect(simple().length).to.equal(2);
 
@@ -28,8 +32,6 @@ describe('Comparator', function() {
 
   describe('#desc', function() {
     it('should return -1, 0 or 1', function() {
-      var desc = compare.desc;
-
       expect(desc()).to.be.a('function');
       expect(desc().length).to.equal(2);
 
@@ -52,8 +54,6 @@ describe('Comparator', function() {
       var spy = sinon.stub().returns(function(){
         return -1;
       });
-      var desc = compare.desc;
-      var simple = compare.simple;
 
       expect(desc(spy())(1, 2)).to.equal(-1);
       expect(spy.called).to.be.ok();
@@ -79,8 +79,6 @@ describe('Comparator', function() {
 
   describe('#property', function() {
     it('should return -1, 0 or 1', function() {
-      var property = compare.property;
-      var desc = compare.desc;
       var foo = {
         name: 'foo'
       };
@@ -101,9 +99,6 @@ describe('Comparator', function() {
 
   describe('#date', function() {
     it('should return -1, 0 or 1', function() {
-      var date = compare.date;
-      var desc = compare.desc;
-
       expect(date()).to.be.a('function');
       expect(date().length).to.equal(2);
 
@@ -116,10 +111,6 @@ describe('Comparator', function() {
 
   describe('#caseInsensitive', function() {
     it('should return -1, 0 or 1', function() {
-      var caseInsensitive = compare.caseInsensitive;
-      var simple = compare.simple;
-      var desc = compare.desc;
-
       expect(caseInsensitive()).to.be.a('function');
       expect(caseInsensitive().length).to.equal(2);
 
