@@ -13,13 +13,19 @@ Usage
 -----
 
 ```js
-var compare = require('comparator');
 var mergesort = require('divide-et-impera');
+var compare = require('comparator');
+var desc = compare.desc;
+var caseInsensitive = compare.caseInsensitive;
+// or
+var desc = require('comparator/desc');
+var caseInsensitive = require('comparator/caseInsensitive');
+
 
 // Basic usage
-mergesort([3, 1, 2, 4, 2], compare.desc()); // => [4, 3, 2, 2, 1]
-mergesort(['a', 'c', 'C', 'B', 'b'], compare.caseInsensitive()); // => ['a', 'B', 'b', 'c', 'C']
-mergesort(['a', 'c', 'C', 'B', 'b'], compare.desc(compare.caseInsensitive())); // => ['B', 'b', 'c', 'C', 'a']
+mergesort([3, 1, 2, 4, 2], desc()); // => [4, 3, 2, 2, 1]
+mergesort(['a', 'c', 'C', 'B', 'b'], caseInsensitive()); // => ['a', 'B', 'b', 'c', 'C']
+mergesort(['a', 'c', 'C', 'B', 'b'], desc(caseInsensitive())); // => ['B', 'b', 'c', 'C', 'a']
 
 // Compose a sort function
 var compose = require('compose-function');
