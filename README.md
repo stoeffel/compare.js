@@ -87,7 +87,7 @@ date('DD.MM.YYYY')('18.01.1986', '19.01.1986'); // => -1
 date('DD.MM.YYYY')('18.01.1986', '18.01.1986'); // => 0
 date('DD.MM.YYYY')('18.01.1986', '17.01.1986'); // => 1
 
-mergesort(list, date());
+mergesort(list, date('DD.MM.YYYY'));
 ```
 
 
