@@ -1,25 +1,25 @@
-comparator
+compare.js
 ================
 
-[![Build Status](https://travis-ci.org/stoeffel/comparator.svg)](https://travis-ci.org/stoeffel/comparator) [![npm version](https://badge.fury.io/js/compare.js.svg)](http://badge.fury.io/js/compare.js)
+[![Build Status](https://travis-ci.org/stoeffel/compare.js.svg)](https://travis-ci.org/stoeffel/comparator) [![npm version](https://badge.fury.io/js/compare.js.svg)](http://badge.fury.io/js/compare.js)
 > Comparator functions for your favorite sort-algo
 
 Installation
 ------------
 
-`npm install comparator`
+`npm install compare.js`
 
 Usage
 -----
 
 ```js
 var mergesort = require('divide-et-impera');
-var compare = require('comparator');
+var compare = require('compare.js');
 var desc = compare.desc;
 var caseInsensitive = compare.caseInsensitive;
 // or require only what you need
-var desc = require('comparator/desc');
-var caseInsensitive = require('comparator/caseInsensitive');
+var desc = require('compare.js/desc');
+var caseInsensitive = require('compare.js/caseInsensitive');
 
 
 // Basic usage

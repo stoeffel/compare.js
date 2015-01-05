@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/stoeffel/comparator"
+    "url": "http://github.com/stoeffel/compare.js"
   },
   "keywords": [
     "sort",
@@ -19,9 +19,9 @@
   "author": "stoeffel",
   "license": "MIT",
   "bugs": {
-    "url": "http://github.com/stoeffel/comparator/issues"
+    "url": "http://github.com/stoeffel/compare.js/issues"
   },
-  "homepage": "http://github.com/stoeffel/comparator",
+  "homepage": "http://github.com/stoeffel/compare.js",
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^2.1.0",
