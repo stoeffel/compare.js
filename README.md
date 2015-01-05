@@ -68,6 +68,8 @@ Simply checks if `a` is smaller then `b`
 simple()(1, 2); // => -1
 simple()(1, 1); // => 0
 simple()(2, 1); // => 1
+
+mergesort(list, simple());
 ```
 
 
@@ -79,6 +81,8 @@ Checks dates using moment.js.
 date()(new Date('2015', '02', '1'), new Date('2015', '01', '31')); // => -1
 date()(new Date('2015', '02', '1'), new Date('2015', '02', '1')); // => 0
 date()(new Date('2015', '01', '31'), new Date('2015', '02', '1')); // => 1
+
+mergesort(list, date());
 ```
 
 
@@ -90,6 +94,8 @@ Inverts a comparator.
 desc(simple())(1, 2); // => 1
 desc(simple())(1, 1); // => 0
 desc(simple())(2, 1); // => -1
+
+mergesort(list, desc(date()));
 ```
 
 
@@ -108,6 +114,8 @@ var bar = {
 property('name')(foo, bar); // => 1
 property('name')(foo, foo); // => 0
 property('name')(bar, foo); // => -1
+
+mergesort(list, property('name'));
 ```
 
 
@@ -126,6 +134,8 @@ var bar = {
 property('name')(foo, bar); // => 1
 property('name')(foo, foo); // => 0
 property('name')(bar, foo); // => -1
+
+mergesort(list, property('name', caseInsensitive()));
 ```
 
 
