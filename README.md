@@ -76,7 +76,7 @@ mergesort(list, simple());
 
 ### date() => comparator(a,b)
 
-Checks dates using moment.js.
+Checks dates using [moment.js](momentjs.com).
 
 ```js
 date()(new Date('2015', '02', '1'), new Date('2015', '01', '31')); // => -1
