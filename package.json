@@ -1,5 +1,5 @@
 {
-  "name": "comparator",
+  "name": "compare.js",
   "version": "1.0.0",
   "description": "Comparator functions for your favorite sort",
   "main": "index.js",
@@ -13,6 +13,7 @@
   "keywords": [
     "sort",
     "comparator",
+    "compare",
     "array"
   ],
   "author": "stoeffel",
