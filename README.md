@@ -17,7 +17,7 @@ var mergesort = require('divide-et-impera');
 var compare = require('comparator');
 var desc = compare.desc;
 var caseInsensitive = compare.caseInsensitive;
-// or
+// or require only what you need
 var desc = require('comparator/desc');
 var caseInsensitive = require('comparator/caseInsensitive');
 
@@ -33,9 +33,9 @@ var curry = require('chickencurry');
 
 var sortDescByName = curry(mergesort)
   (curry.__, compose(
-      compare.caseInsensitive,
-      curry(compare.property)('name'),
-      compare.desc
+      caseInsensitive,
+      curry(property)('name'),
+      desc
     )()
   ); 
 
