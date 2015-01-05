@@ -1,9 +1,9 @@
 var moment = require('moment');
 
-module.exports = function() {
+module.exports = function(format) {
   return function(a, b) {
-    var momentA = moment(a);
-    var momentB = moment(b);
+    var momentA = moment(a, format);
+    var momentB = moment(b, format);
 
     if (momentA.isBefore(momentB)) {
       return -1;

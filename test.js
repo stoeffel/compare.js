@@ -109,6 +109,8 @@ describe('Comparator', function() {
       expect(date()(new Date('2015', '01', '31'), new Date('2015', '02', '1'))).to.equal(1);
       expect(date()(new Date('2015', '02', '1'), new Date('2015', '01', '31'))).to.equal(-1);
       expect(date()(new Date('2015', '02', '1'), new Date('2015', '02', '1'))).to.equal(0);
+      expect(date('DD.MM.YYYY')('18.01.1986', '18.01.1986')).to.equal(0);
+      expect(date('DD.MM.YYYY')('18.01.1986', '19.01.1986')).to.equal(-1);
       expect(desc(date())(new Date('2015', '02', '1'), new Date('2015', '01', '31'))).to.equal(1);
     });
   });

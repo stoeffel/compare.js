@@ -26,6 +26,7 @@ var caseInsensitive = require('comparator/caseInsensitive');
 mergesort([3, 1, 2, 4, 2], desc()); // => [4, 3, 2, 2, 1]
 mergesort(['a', 'c', 'C', 'B', 'b'], caseInsensitive()); // => ['a', 'B', 'b', 'c', 'C']
 mergesort(['a', 'c', 'C', 'B', 'b'], desc(caseInsensitive())); // => ['B', 'b', 'c', 'C', 'a']
+mergesort(['a', 'c', 'C', 'B', 'b'], desc(caseInsensitive())); // => ['B', 'b', 'c', 'C', 'a']
 
 // Compose a sort function
 var compose = require('compose-function');
@@ -81,6 +82,10 @@ Checks dates using moment.js.
 date()(new Date('2015', '02', '1'), new Date('2015', '01', '31')); // => -1
 date()(new Date('2015', '02', '1'), new Date('2015', '02', '1')); // => 0
 date()(new Date('2015', '01', '31'), new Date('2015', '02', '1')); // => 1
+
+date('DD.MM.YYYY')('18.01.1986', '19.01.1986'); // => -1
+date('DD.MM.YYYY')('18.01.1986', '18.01.1986'); // => 0
+date('DD.MM.YYYY')('18.01.1986', '17.01.1986'); // => 1
 
 mergesort(list, date());
 ```
