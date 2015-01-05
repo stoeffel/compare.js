@@ -82,6 +82,9 @@ describe('Comparator', function() {
       var foo = {
         name: 'foo'
       };
+      var FOO = {
+        name: 'FOO'
+      };
       var bar = {
         name: 'bar'
       };
@@ -94,6 +97,7 @@ describe('Comparator', function() {
       expect(property('name')(foo, bar)).to.equal(1);
       expect(desc(property('name'))(foo, bar)).to.equal(-1);
       expect(property('name', desc())(foo, bar)).to.equal(-1);
+      expect(property('name', caseInsensitive())(foo, FOO)).to.equal(0);
     });
   });
 

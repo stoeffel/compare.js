@@ -86,7 +86,7 @@ mergesort(list, date());
 ```
 
 
-### desc(comparator) => comparator(a,b)
+### desc([comparator=simple]) => comparator(a,b)
 
 Inverts a comparator.
 
@@ -99,7 +99,7 @@ mergesort(list, desc(date()));
 ```
 
 
-### property(fn) => comparator(a,b)
+### property(propertyName, [comparator=simple]) => comparator(a,b)
 
 Compares a property of two objects.
 
@@ -114,26 +114,23 @@ var bar = {
 property('name')(foo, bar); // => 1
 property('name')(foo, foo); // => 0
 property('name')(bar, foo); // => -1
+
+// this works
+property('name', caseInsensitive())
+// this doesn't
+caseInsensitive(property('name'))
 
 mergesort(list, property('name'));
 ```
 
 
-### caseInsensitive(fn) => comparator(a,b)
+### caseInsensitive([comparator=simple]) => comparator(a,b)
 
 Compares a property of two objects.
 
 ```js
-var foo = {
-  name: 'foo'
-};
-var bar = {
-  name: 'bar'
-};
-
-property('name')(foo, bar); // => 1
-property('name')(foo, foo); // => 0
-property('name')(bar, foo); // => -1
+caseInsensitive()('a', 'A'); // => 0
+caseInsensitive()('A', 'a'); // => 0
 
 mergesort(list, property('name', caseInsensitive()));
 ```
