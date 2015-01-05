@@ -1,4 +1,3 @@
-var maybeComparator = require('./util/maybeComparator');
 var compare = module.exports;
 
 compare.simple = require('./simple');
