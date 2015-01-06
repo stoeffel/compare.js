@@ -34,9 +34,9 @@ var curry = require('chickencurry');
 
 var sortDescByName = curry(mergesort)
   (curry.__, compose(
-      caseInsensitive,
+      desc,
       curry(property)('name'),
-      desc
+      caseInsensitive
     )()
   ); 
 
